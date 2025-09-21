@@ -19,16 +19,16 @@ import {
 
 // Schema Validation
 const schema = z.object({
-  firstName: z.string().min(1, "กรุณากรอกชื่อ"),
-  lastName: z.string().min(1, "กรุณากรอกนามสกุล"),
-  address: z.string().min(1, "กรุณากรอกที่อยู่"),
-  phone: z.string().min(9, "กรุณากรอกเบอร์มือถือให้ครบ"),
-  school: z.string().min(1, "กรุณากรอกโรงเรียน"),
-  gpa: z.number().min(0, "GPA ต้องมากกว่า 0").max(4, "GPA ต้องไม่เกิน 4"),
-  skills: z.string().optional(),
-  reason: z.string().optional(),
-  major: z.string().min(1, "กรุณากรอกสาขาที่เลือก"),
-  university: z.string().min(1, "กรุณากรอกมหาวิทยาลัย"),
+  firstName: z.string().min(1, "กรุณากรอกชื่อ"),
+  lastName: z.string().min(1, "กรุณากรอกนามสกุล"),
+  address: z.string().min(1, "กรุณากรอกที่อยู่"),
+  phone: z.string().min(9, "กรุณากรอกเบอร์มือถือให้ครบ"),
+  school: z.string().min(1, "กรุณากรอกโรงเรียน"),
+  gpa: z.number().min(0, "GPA ต้องมากกว่า 0").max(4, "GPA ต้องไม่เกิน 4"),
+  skills: z.string(), // Change to non-optional
+  reason: z.string(), // Change to non-optional
+  major: z.string().min(1, "กรุณากรอกสาขาที่เลือก"),
+  university: z.string().min(1, "กรุณากรอกมหาวิทยาลัย"),
 });
 
 type FormData = z.infer<typeof schema>;

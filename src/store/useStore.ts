@@ -1,22 +1,19 @@
 import { create } from "zustand";
 
-export interface Portfolio {
-  id: string;
-  firstName: string;
-  lastName: string;
-  address: string;
-  phone: string;
-  school: string;
-  gpa: number;
-  skills: string;
-  reason: string;
-  major: string;
-  university: string;
-  photos?: string[];        // รูปนักเรียน
-  activities?: string[];    // รูปกิจกรรม
-  awards?: string[];        // รางวัล
-  works?: string[];         // ผลงาน
-}
+export type Portfolio = {
+  id: string;
+  firstName: string;
+  lastName: string;
+  address: string;
+  phone: string;
+  school: string;
+  gpa: number;
+  major: string;
+  university: string;
+  photos: string[];
+  skills?: string; // Change to optional
+  reason?: string; // Change to optional
+};
 
 interface User {
   email: string;
